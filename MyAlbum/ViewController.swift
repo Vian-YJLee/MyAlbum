@@ -23,5 +23,16 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func remind(_ sender: Any) {
+        
+        let PopUp = UIAlertController(title: "Swift", message: "다시한번 날아가볼래?", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Go!", style: .default, handler: nil)
+        
+        PopUp.addAction(action)
+        present(PopUp, animated: true, completion: nil)
+    }
+    
+    
 }
 
