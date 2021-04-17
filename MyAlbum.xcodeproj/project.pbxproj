@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C132562262AE493002E670B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C132561262AE493002E670B /* AlbumViewController.swift */; };
 		4C2E2BF22626A4C0003D8946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E2BF12626A4C0003D8946 /* AppDelegate.swift */; };
 		4C2E2BF42626A4C0003D8946 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E2BF32626A4C0003D8946 /* SceneDelegate.swift */; };
 		4C2E2BF62626A4C0003D8946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E2BF52626A4C0003D8946 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C132561262AE493002E670B /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		4C2E2BEE2626A4C0003D8946 /* MyAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2E2BF12626A4C0003D8946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C2E2BF32626A4C0003D8946 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				4C2E2BF32626A4C0003D8946 /* SceneDelegate.swift */,
 				4C2E2BF52626A4C0003D8946 /* ViewController.swift */,
 				4C2E2BF72626A4C0003D8946 /* Main.storyboard */,
+				4C132561262AE493002E670B /* AlbumViewController.swift */,
 				4C2E2BFD2626A4C1003D8946 /* Assets.xcassets */,
 				4C2E2BFF2626A4C1003D8946 /* LaunchScreen.storyboard */,
 				4C2E2C022626A4C1003D8946 /* Info.plist */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2E2BF62626A4C0003D8946 /* ViewController.swift in Sources */,
+				4C132562262AE493002E670B /* AlbumViewController.swift in Sources */,
 				4C2E2BF22626A4C0003D8946 /* AppDelegate.swift in Sources */,
 				4C2E2BF42626A4C0003D8946 /* SceneDelegate.swift in Sources */,
 				4C2E2BFC2626A4C0003D8946 /* MyAlbum.xcdatamodeld in Sources */,
