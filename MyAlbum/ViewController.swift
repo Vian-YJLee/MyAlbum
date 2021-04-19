@@ -16,6 +16,13 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func alertFunc(_ sender: Any) {
+        let stringMSG = """
+        단순 알림창 반복시 사용할 함수 동작 확인
+        이게 보인다면 잘 돌아가는거겠지
+        """
+        makeAlert(title: "알림창 생성 함수 Test", message: stringMSG)
+    }
     @IBAction func hello(_ sender: Any) {
         let alert = UIAlertController(title: "Hello", message: "My remind learning App", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -34,8 +41,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindmain (segue : UIStoryboardSegue) {
-        //다른 ViewController에서 Main으로 돌아오기 위한 segue엑션
+        //다른 ViewController에서 Main으로 돌아오기 위한 segue
         
     }
+    //알람기능 반복적으로 사용할때 사용할 함수
+    func makeAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "확인", style: .default) { (aciton) in print("confirm")}
+        let cancle = UIAlertAction(title: "취소", style: .cancel) {
+            (action) in print("cancle")
+        }
+        
+        alert.addAction(cancle)
+        alert.addAction(confirm)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
