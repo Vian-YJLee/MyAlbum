@@ -24,7 +24,7 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        progressLabel.text = "진행도 \(comprehend)%"
+        gotIt()
         
     }
     
@@ -48,13 +48,25 @@ class AlbumViewController: UIViewController {
         
         understnad.addAction(underAciton)
         present(understnad, animated: true, completion: nil)
+        gotIt()
         
+        /*
         let randomcompre = arc4random_uniform(100) + 1
         comprehend = Int(randomcompre)
         progressLabel.text = "진행도 \(comprehend)%"
         //랜덤한 값 출력해 라벨로 넘기기
-        
+        */
     }
+    
+    func gotIt() {
+        let randomcompre = arc4random_uniform(100) + 1
+        comprehend = Int(randomcompre)
+        progressLabel.text = "진행도 \(comprehend)%"
+        //랜덤값 출력 메서드.
+    }
+    
+    
+
     @IBAction func alertFuncTest(_ sender: ViewController) {
         
         
