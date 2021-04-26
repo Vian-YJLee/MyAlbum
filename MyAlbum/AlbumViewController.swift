@@ -17,6 +17,8 @@ class AlbumViewController: UIViewController {
     //쓸어내리기로도 가능하지만 메인 화면으로 돌아가는 버튼 추가
     //UIStoryboardSegue class 사용법 상기..
     //protocol과 delegate사용해 데이터 주고받는 방법도 구현해보기
+    @IBOutlet weak var down: UIButton!
+    //다시한번
     
     var comprehend = 0
     @IBOutlet weak var progressLabel: UILabel!
@@ -45,7 +47,7 @@ class AlbumViewController: UIViewController {
         let message = "String, variable \(comprehend)% 이해했다"
         let understnad = UIAlertController(title: "개념이해", message: message, preferredStyle: .alert)
         let underAciton = UIAlertAction(title: "Good", style: .default, handler: {underAction in self.gotIt() })
-        //alert 창에 현재 Label값 전달하고, 확인 버튼 눌렀을 때 Label값 변경되도록 handler에 closer 추가
+        //alert 창에 현재 Label값 전달하고, 확인 버튼 눌렀을 때 Label값 변경되도록 handler에 closer 추가햣
         
         understnad.addAction(underAciton)
         present(understnad, animated: true, completion: nil)
