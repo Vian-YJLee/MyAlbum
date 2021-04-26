@@ -44,11 +44,12 @@ class AlbumViewController: UIViewController {
         
         let message = "String, variable \(comprehend)% 이해했다"
         let understnad = UIAlertController(title: "개념이해", message: message, preferredStyle: .alert)
-        let underAciton = UIAlertAction(title: "Good", style: .default, handler: nil)
+        let underAciton = UIAlertAction(title: "Good", style: .default, handler: {underAction in self.gotIt() })
+        //alert 창에 현재 Label값 전달하고, 확인 버튼 눌렀을 때 Label값 변경되도록 handler에 closer 추가
         
         understnad.addAction(underAciton)
         present(understnad, animated: true, completion: nil)
-        gotIt()
+        
         
         /*
         let randomcompre = arc4random_uniform(100) + 1
