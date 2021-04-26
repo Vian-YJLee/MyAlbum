@@ -7,6 +7,9 @@
 //
 
 import UIKit
+extension ViewController {
+    
+}
 
 class AlbumViewController: UIViewController {
     
@@ -52,7 +55,10 @@ class AlbumViewController: UIViewController {
         //랜덤한 값 출력해 라벨로 넘기기
         
     }
-    @IBAction func alertFuncTest(_ sender: Any) {
+    @IBAction func alertFuncTest(_ sender: ViewController) {
+        
+        
+        
         
         
     }
