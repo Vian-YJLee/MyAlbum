@@ -53,21 +53,29 @@ class ViewController: UIViewController {
     
     //알림창 기능 반복적으로 사용할때 사용할 함수
     
-    func makeAlert(title: String, message: String, confirmAction: @escaping () -> (), cancleAction: @escaping ()-> () ) {
+    func makeAlert(title: String? = nil, message: String, confirm: String? =  nil, cancel: String? = nil, confirmAction: (() -> ())? = nil, cancleAction: (()-> ())? = nil) {
         //confirmAlction, cancleAciton 파라미터 추가
+        //아무 동작도 하지 않을 경우 대비, 각 파라미터 옵셔널 처리
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let confirm = UIAlertAction(title: "확인", style: .default) { (aciton) in confirmAction()
+        let confirm = UIAlertAction(title: "확인", style: .default) { (aciton) in
+            if let action = confirmAction {
+                action()
+                //동작 없을 경우 대비 옵셔널 바인딩 처리
+            }
             //action type으로 파라미터를 넘기는 closer
+            
         }
-        let cancle = UIAlertAction(title: "취소", style: .cancel) {
-            (action) in cancleAction()
+        let cancel = UIAlertAction(title: "취소", style: .cancel) {(action) in
+            if let action = cancleAction {
+                action()
         }
-        
-        alert.addAction(cancle)
+    }
+        alert.addAction(cancel)
         alert.addAction(confirm)
         present(alert, animated: true, completion: nil)
-    }
+}
     
+
     
 }
 
