@@ -7,22 +7,24 @@ import Foundation
 //code
 // }
 
+/*
+ 
+ 
 print("---- while") // 조건을 검사 후 코드 수행
-var i = 0
+var i = 10
 while i < 10 {
     print(i)
     
-    if i == 5 {
-        break
-    }
+//    if i == 5 {
+//        break
+//    }
     i += 1
 }
 print("----- repeat") // 코드 수행 후 조건 검사
-i = 0
+i = 10
 repeat {
     print(i)
     i += 1
-    
 } while i < 10
 
 // while : 조건 검사 > 코드 수행 > 조건 검사 > 코드 수행
@@ -88,3 +90,43 @@ for a in halfRange where a == 2{ //2단만
         print("gugu: \(a) * \(b) = \(a * b)")
     }
 } //사실 다중 for문이 협업에는 그렇게 좋은게 아니란건 수 년 간 경험으로..^^;
+
+*/
+
+
+//swift의 switch
+
+/*
+let num = 10
+
+switch num {
+case 0:
+    print("---> 0 입니다")
+case 0...10:
+    print("---> 0부터 10사이 입니다")
+case 10:
+    print("---> 10 입니다")
+default:
+    print("---> 나머지 입니다")
+}
+
+let animal = "cat"
+
+switch animal {
+case "dog", "cat":
+    print("반려동물")
+default:
+    print("무슨 동물이죠")
+}
+
+ */
+
+let num = 15
+
+switch num {
+case _ where num % 2 == 0:
+    print("\(num)은 짝수")
+default:
+    print("\(num)은 홀수")
+}
+
