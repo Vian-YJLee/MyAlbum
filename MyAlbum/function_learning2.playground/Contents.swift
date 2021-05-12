@@ -31,3 +31,57 @@ name3(firstName: "롸롸", lastName: "박")
 let returnTest = name3(firstName: "와와", lastName: "장")
 returnTest
 print("풀넴: \(returnTest)")
+
+
+// overload 개념: 같은 이름, 다른 행동
+
+func printTotalPrice(price: Double, stock: Double) {
+    print("Total Price: \(price * stock)")
+}
+
+func printTotalPrice(price: Int, stock: Int) {
+    print("Total Price: \(price * stock)")
+}
+
+// In-Out parameter
+
+//func increamentPrint(_ value: Int) {
+//    value += 1
+//    print("\(value)")
+//}
+//parameter는 지정되는 순간 값을 카피하기 때문에 constant로 뮤츄얼함
+// 그래서 copy in-out 필요
+
+var value = 3
+func increamentPrint(_ value: inout Int) {
+    value += 1
+    print(value)
+}
+
+//혹은
+
+increamentPrint(&value)
+
+// 함수를 그 자체로 파라미터로 넘기는 법 function as a param
+
+func add(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+
+func subtract(_ a: Int, _ b: Int) -> Int {
+    return a - b
+}
+
+var function1 = add
+function1(4, 2)
+function1 = subtract
+function1(6, 2)
+
+//함수를 파라미터로 넘길 때는 파라미터 형태가 같아야 한다
+func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    let result = function(a, b)
+    print(result)
+}
+
+printResult(add, 10, 5)
+printResult(subtract, 10, 5)
