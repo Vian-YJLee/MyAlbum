@@ -130,3 +130,15 @@ default:
     print("\(num)은 홀수")
 }
 
+let cooridate = (x: 11, y: 10)
+
+switch cooridate {
+case (0, 0):
+    print("----> 원점")
+case (let x, 0):
+    print("----> x축 좌표 \(x)")
+case (0, let y):
+    print("----> y축 좌표 \(y)")
+case (let x, let y):
+    print("----> 입력 좌표값: x: \(x), y: \(y)")
+}
