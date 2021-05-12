@@ -36,3 +36,5 @@ func totalPrice(price: Int, stock: Int) -> Int {
 
 let calculatedPrice = totalPrice(price: 8370, stock: 27)
 
+// totalPrice(_ price: Int, _ stock: int)
+// param 이름 없이..
