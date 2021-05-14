@@ -85,3 +85,5 @@ func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
 
 printResult(add, 10, 5)
 printResult(subtract, 10, 5)
+
+//함수는 한가지 일만 하도록 구성하는 것이 가장 Best
