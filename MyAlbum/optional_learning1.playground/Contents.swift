@@ -92,7 +92,7 @@ print(favFoodName)
 if let foodName = favFoodName {
     print(foodName)
 } else {
-    print("안먹어?")
+    print("뭐 안먹어?")
 }
 
 // guard Optional binding
