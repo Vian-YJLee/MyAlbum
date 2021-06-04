@@ -75,3 +75,48 @@ let myLocation = Location(x: 3, y: 6)
 let stores = [store1, store2, store3]
 
 printNearbyCVS(currentLocation: myLocation, CVSData: stores)
+
+
+// 예제 2
+// 1. 강의 이름, 강사이름, 학생 수 를 가지는 Struct 작성
+// 2. 강의 Array와 강사 이름을 받아, 해당 강사의 강의 이름을 출력하는 함수 작성
+// 3. 강의 3개 만들고 강사이름으로 강의 찾기
+
+// 1
+struct Lecture {
+    let className: String
+    let teacherName: String
+    let stockOfstudent: Int
+    
+}
+
+let lecture1 = Lecture(className: "Swift", teacherName: "Jack", stockOfstudent: 10)
+let lecture2 = Lecture(className: "Android", teacherName: "Johnson", stockOfstudent: 17)
+let lecture3 = Lecture(className: "React Native", teacherName: "sara", stockOfstudent: 14)
+
+// 2-1 강사 이름으로 강의 찾기
+
+func searchLectureByTName (name: String, LectureData: [Lecture]) {
+    
+    var lectureTitle = ""
+    var teacherName = ""
+    
+    for searchByName in LectureData {
+        
+        if name == searchByName.teacherName {
+            lectureTitle = searchByName.className
+            teacherName = searchByName.teacherName
+            print("\(teacherName) 선생님의 강의는 \(lectureTitle) 입니다.")
+        } else {
+            print("\(name) 선생님의 강의는 개설되지 않았습니다.")
+        }
+    }
+    
+}
+// 3
+
+let teacher = "Jack"
+let lectures = [Lecture]()
+searchLectureByTName(name: "Jack", LectureData: lectures)
+
+
