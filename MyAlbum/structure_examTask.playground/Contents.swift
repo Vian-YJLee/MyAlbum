@@ -5,14 +5,21 @@ import UIKit
 // 2. 강의 Array와 강사 이름을 받아, 해당 강사의 강의 이름을 출력하는 함수 작성
 // 3. 강의 3개 만들고 강사이름으로 강의 찾기
 
-// 1
-struct Lecture {
+//protocol : '규약' 보다는, 어떤 서비스를 해야할 때 해야 할 일 정도로 기억.
+
+// 0. CustomStringConvertable -> 기존 선언된 protocol을 사용해봄, 직접 구현은 추후에..
+
+// 1 ( +0. CustomStringConvertable Protocol 추가해 동작 원리 확인
+struct Lecture: CustomStringConvertible {
+    var description: String {
+        return "Title: \(className), Instructor: \(instructorName)"
+    }
     let className: String
     let instructorName: String
     let stockOfstudent: Int
     
 }
-
+//struct property(stored) 구성
 let lecture1 = Lecture(className: "Swift", instructorName: "Jack", stockOfstudent: 10)
 let lecture2 = Lecture(className: "Android", instructorName: "Johnson", stockOfstudent: 17)
 let lecture3 = Lecture(className: "React Native", instructorName: "sara", stockOfstudent: 14)
@@ -47,5 +54,7 @@ func searchLectureByTName (name: String, LectureData: [Lecture]) {
 let teacher = "Jai"
 let lectures = [lecture1, lecture2, lecture3]
 searchLectureByTName(name: "Jack", LectureData: lectures)
-
 searchLectureByTName(name: teacher, LectureData: lectures)
+
+//protocol 적용 후, 학생 숫자 값을 갖고 있지만 프로토콜에 따라 강의 이름과 강사 이름만 출력된다.
+print(lecture1)
