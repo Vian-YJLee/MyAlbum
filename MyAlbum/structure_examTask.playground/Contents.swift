@@ -58,3 +58,4 @@ searchLectureByTName(name: teacher, LectureData: lectures)
 
 //protocol 적용 후, 학생 숫자 값을 갖고 있지만 프로토콜에 따라 강의 이름과 강사 이름만 출력된다.
 print(lecture1)
+
